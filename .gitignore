@@ -1,13 +1,10 @@
 # Compiled Object files
-*.slo
-*.lo
-*.o
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+*.pyc
+.bzr
+.bzrignore
+bin
+eggs
+develop-eggs
+parts
+.mr.developer.cfg
+.installed.cfg

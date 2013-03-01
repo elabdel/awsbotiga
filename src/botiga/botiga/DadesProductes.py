@@ -16,7 +16,6 @@ class DadesProductes:
 			producte["preu"]=preu
 			productes.append(producte)
 			#print linea.split("/")
-		print productes
 		fitxer.close()
 		return productes
 		

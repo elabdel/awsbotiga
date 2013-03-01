@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Prpductes</title>
+<title>Productes</title>
 <link rel="stylesheet" href="${request.static_url('botiga:static/style.css')}" type="text/css" media="screen" charset="utf-8" />
 </head>
    <body>
@@ -12,8 +12,8 @@
 		this.preu=preu;
 		this.afegirProducte=afegirProducte;
    }
-   function afegirProducte(){
-	var id = document.getElementById("id").value;
+   function afegirProducte(id){
+	//var id = document.getElementById("id").value;
 	var nom = document.getElementById("nom").value;
 	//var stock = document.getElementById("stock").value;
 	var preu = document.getElementById("preu").value;
@@ -36,16 +36,16 @@
       <table border="1">
 	  <tr><td>ID</td><td>Nom producte</td><td>Stock</td><td>Preu</td></tr>
       % for prod in productes:
-			$id = ${prod["id"]}
+			
 		<tr>
-         <td><input type='text' id='id' value=></td>
+         <td><input type='text' id='id' value=${prod["id"]}></td>
 		  <td><input type='text' id='nom' value=${prod["nom"]}></td>
 		   <td><input type='text' id='stock' value=${prod["stock"]}></td>
 		    <td><input type='text' id='preu' value=${prod["preu"]}></td>
 		 <!--<td id='nom'>${prod["nom"]}</td>
 		 <td id='stock'>${prod["stock"]}</td>
 		 <td id='preu'>${prod["preu"]} €/Kg</td>!-->
-		 <td><input type='button' name=${prod["id"]} id=${prod["id"]} value='+' onClick='afegirProducte();'/></td>
+		 <td><input type='button' name=${prod["id"]} id=${prod["id"]} value='+' onClick='afegirProducte(document.getElementById("id").value);'/></td>
 		</tr>
       % endfor
 	  

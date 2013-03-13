@@ -1,0 +1,32 @@
+#!/home/usuari/env/bin/python
+
+import sys
+sys.path[0:0] = [
+    '/home/usuari/env/awsbotiga/eggs/pyramid-1.4-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/waitress-0.8.2-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/Paste-1.7.5.1-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/setuptools-0.6c12dev_r88846-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/PasteDeploy-1.5.0-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/nose-1.2.1-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/WebTest-1.4.3-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/pyramid_debugtoolbar-1.0.4-py2.6.egg',
+    '/home/usuari/env/awsbotiga/src/botiga',
+    '/home/usuari/env/awsbotiga/eggs/Pygments-1.6-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/WebOb-1.2.3-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/translationstring-1.1-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/venusian-1.0a7-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/zope.deprecation-4.0.2-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/zope.interface-4.0.3-py2.6-linux-i686.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/repoze.lru-0.6-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/Mako-0.7.3-py2.6.egg',
+    '/home/usuari/env/awsbotiga/eggs/Chameleon-2.11-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/MarkupSafe-0.15-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/unittest2-0.5.1-py2.6.egg',
+    '/home/usuari/env/lib/python2.6/site-packages/ordereddict-1.1-py2.6.egg',
+    ]
+
+
+import pyramid.scripts.pshell
+
+if __name__ == '__main__':
+    sys.exit(pyramid.scripts.pshell.main())

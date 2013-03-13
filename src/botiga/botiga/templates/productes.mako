@@ -5,51 +5,39 @@
 </head>
    <body>
    <script type="text/javascript">
-    Llista = new Array();
-   function Comandes(id, nom, preu){
-		this.id=id;
-		this.nom=nom;
-		this.preu=preu;
-		this.afegirProducte=afegirProducte;
-   }
-   function afegirProducte(id){
-	//var id = document.getElementById("id").value;
-	var nom = document.getElementById("nom").value;
-	//var stock = document.getElementById("stock").value;
-	var preu = document.getElementById("preu").value;
-	comandes= new Comandes(id, nom, preu);
-	Llista[Llista.length] = comandes;
-	Mostrar();
-	}
-	function Mostrar(){
-	document.getElementById("llista").innerHTML = "";
-		document.getElementById("llista").innerHTML += "<h1>LLista de les comandes</h1>";
-		for(var i=0; i<Llista.length;i++){
-			document.getElementById("llista").innerHTML += "ID: "+Llista[i].id+"<br/>";
-			document.getElementById("llista").innerHTML += "Nom: "+Llista[i].nom+"<br/>";
-			document.getElementById("llista").innerHTML += "Preu: "+Llista[i].preu+"<br/>";
-
-    }
-	}
+	function Afegir(id, stock){
+	var iid = document.getElementById(id).value;
+	var stockk = document.getElementById(stock).innerHTML;
+		stockk = Number(stockk);
+		iid = Number(iid);
+		if(iid < stock){
+		iid=eval(iid+1);
+		document.getElementById(id).value = iid;
+		}
+		}
    </script>
       <h1>${projecte}</h1>
+	  <form action="realitzarComanda" method="POST">
       <table border="1">
-	  <tr><td>ID</td><td>Nom producte</td><td>Stock</td><td>Preu</td></tr>
+	  <tr><td>ID</td><td>Nom producte</td><td>Stock</td><td>Preu</td><td>Quantitat</td></tr>
       % for prod in productes:
 			
 		<tr>
-         <td><input type='text' id='id' value=${prod["id"]}></td>
-		  <td><input type='text' id='nom' value=${prod["nom"]}></td>
-		   <td><input type='text' id='stock' value=${prod["stock"]}></td>
-		    <td><input type='text' id='preu' value=${prod["preu"]}></td>
-		 <!--<td id='nom'>${prod["nom"]}</td>
-		 <td id='stock'>${prod["stock"]}</td>
-		 <td id='preu'>${prod["preu"]} €/Kg</td>!-->
-		 <td><input type='button' name=${prod["id"]} id=${prod["id"]} value='+' onClick='afegirProducte(document.getElementById("id").value);'/></td>
+         <td >${prod["id"]}</td>
+		  <td name='${prod["nom"]}'>${prod["nom"]}</td>
+		   <td id=${prod["stock"]}>${prod["stock"]} Kg</td>
+		    <td id=${prod["preu"]}>${prod["preu"]} €/Kg</td>
+			<td><input type="text" id='${prod["id"]}' name='${prod["id"]}' value=""/></td>
+		 
+		 <td><input type='button' name="sumar" value='+' onClick='Afegir(${prod["id"]}, ${prod["stock"]})'/></td>
+		 
 		</tr>
       % endfor
-	  
+	  <tr>
+	  <td><input type='submit' name="enviar" value="Realizar compra"/></td>
+	  </tr>
       </table>
-	  <div id="llista"></div>
+	  
+	  </form>
    </body>
 </html>

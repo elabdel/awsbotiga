@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from pyramid.view import view_config
-from DadesProductes import DadesProductes	
+from DadesProductes import DadesProductes
+from DadesComandes import DadesComandes	
 import random
 @view_config(route_name='productes', renderer='productes.mako')
 def productes_view(request):
@@ -20,7 +21,9 @@ def my_view(request):
 def comandes_view(request):
 	if request.method == 'POST':
 		dades = DadesProductes()
+		comandes = DadesComandes()
 		productes = dades.getProductes()
+		IDcomanda = int(comandes.getIDcomanda())+1
 		if request.POST.get('1'):
 			quantitPepino = int(request.POST.get('1'))
 			PreuPepino = float(productes[0]["preu"])*(quantitPepino)
@@ -39,6 +42,17 @@ def comandes_view(request):
 		else:
 			quantitPlatan = 0
 			PreuPlatan = 0
+		#IDcomanda = int(IDcomanda)+1
 		IDclient = random.randrange(1,100)
 		preuTotal = (PreuPepino + PreuEnciam + PreuPlatan)
-	return {"id_comanda":str(1), "id_client":IDclient, "pepino":quantitPepino, "enciam":quantitEnciam, "platan":quantitPlatan, "preu":preuTotal}
+		comanda = "%s/%s/%s/%s/%s/%s\n" %(IDcomanda,IDclient,quantitPepino,quantitEnciam,quantitPlatan,preuTotal)
+		print comanda
+		comandes.AfegirComanda(comanda)
+		comandes.AfegirIDcomanda(str(IDcomanda))
+	return {"id_comanda":IDcomanda, "id_client":IDclient, "pepino":quantitPepino, "enciam":quantitEnciam, "platan":quantitPlatan, "preu":preuTotal}
+@view_config(route_name='llistaComandes', renderer='llistaComandes.mako')
+def llista_comandes_view(request):
+	comandesClass = DadesComandes()
+	comandas = comandesClass.getComandes()
+	return {"comandas":comandas}
+	

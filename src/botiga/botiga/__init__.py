@@ -11,5 +11,6 @@ def main(global_config, **settings):
     config.add_route('home', '/')
     config.add_route('productes', '/productes')
     config.add_route('realitzarComanda', '/realitzarComanda')
+    config.add_route('llistaComandes', '/llistaComandes')
     config.scan()
     return config.make_wsgi_app()

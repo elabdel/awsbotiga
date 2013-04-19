@@ -16,28 +16,28 @@
 		}
 		}
    </script>
-      <h1>${projecte}</h1>
 	  <form action="realitzarComanda" method="POST">
-      <table border="1">
-	  <tr><td>ID</td><td>Nom producte</td><td>Stock</td><td>Preu</td><td>Quantitat</td></tr>
+      <table border="0" class="taula">
+	  <tr><td colspan="6"><center><h1>${projecte}</h1></center></td></tr>
+	  <tr><td class="button">ID</td><td class="button">Nom producte</td><td class="button">Stock</td><td class="button">Preu</td><td class="button">Quantitat</td></tr>
       % for prod in productes:
 			
 		<tr>
-         <td >${prod["id"]}</td>
-		  <td name='${prod["nom"]}'>${prod["nom"]}</td>
-		   <td id=${prod["stock"]}>${prod["stock"]} Kg</td>
-		    <td id=${prod["preu"]}>${prod["preu"]} €/Kg</td>
-			<td><input type="text" id='${prod["id"]}' name='${prod["id"]}' value=""/></td>
+         <td class="taula">${prod["id"]}</td>
+		  <td name='${prod["nom"]}' class="taula">${prod["nom"]}</td>
+		   <td id=${prod["stock"]} class="taula" >${prod["stock"]} Kg</td>
+		    <td id=${prod["preu"]} class="taula" >${prod["preu"]} €/Kg</td>
+			<td><input type="text" class="taula" id='${prod["id"]}' name='${prod["id"]}' value="" readonly /></td>
 		 
-		 <td><input type='button' name="sumar" value='+' onClick='Afegir(${prod["id"]}, ${prod["stock"]})'/></td>
+		 <td><input type='button' class="button" name="sumar" value='+' onClick='Afegir(${prod["id"]}, ${prod["stock"]})'/></td>
 		 
 		</tr>
       % endfor
 	  <tr>
-	  <td><input type='submit' name="enviar" value="Realizar compra"/></td>
+	  <td><input type='submit' name="enviar" value="Realizar compra" class="button"/></td>
 	  </tr>
       </table>
-	  
+	  <input type="button" class="button" value="Inici" onclick="window.location.href='/'"></input>
 	  </form>
    </body>
 </html>

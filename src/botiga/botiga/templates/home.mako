@@ -5,6 +5,7 @@
 </head>
 <body>
    <h1>Benvinguts a la nostra botiga SimpleShop</h1>
-   <a href="/productes">Visualitza els nostres productes </a>
+   <input type="button" class="button" value="Productes" onclick="window.location.href='/productes'"></input>
+   <input type="button" class="button" value="Llistat de comandes" onclick="window.location.href='/llistaComandes'"></input>
 </body>
 </html>  

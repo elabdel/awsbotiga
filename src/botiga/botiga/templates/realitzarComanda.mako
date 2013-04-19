@@ -1,18 +1,20 @@
 <html>
 	<head>
 		<title>La teva compra</title>
+		<link rel="stylesheet" href="${request.static_url('botiga:static/style.css')}" type="text/css" media="screen" charset="utf-8" />
 	</head>
    <body>
-		<h1>La teva compra</h1>
 		
-		<table border='1'>
+		
+		<table border='1' class="taula">
+				<tr><td colspan="6"><center><h1>La teva compra</h1></center></td></tr>
 				<tr>
-					<td><b>ID Comanda</b></td>
-					<td><b>ID Client</b></td>
-					<td><b>Pepino</b></td>
-					<td><b>Enciam</b></td>
-					<td><b>Platan</b></td>
-					<td><b>Preu Total</b></td>
+					<td class="button"><b>ID Comanda</b></td>
+					<td class="button"><b>ID Client</b></td>
+					<td class="button"><b>Pepino</b></td>
+					<td class="button"><b>Enciam</b></td>
+					<td class="button"><b>Platan</b></td>
+					<td class="button"><b>Preu Total</b></td>
 				</tr>
 				
 				<tr>
@@ -25,6 +27,6 @@
 				</tr>
 		</table>
 		<br>
-		<a href='/'>Inici</a>
+		<input type="button" class="button" value="Inici" onclick="window.location.href='/'"></input>
 	</body>
 </html>

@@ -1,9 +1,9 @@
-#!/home/usuari/env/bin/python
+#!/home/abdel/env/bin/python
 
 import sys
 sys.path[0:0] = [
-    '/home/usuari/env/awsbotiga/eggs/setuptools-0.6c12dev_r88846-py2.6.egg',
-    '/home/usuari/env/awsbotiga/eggs/zc.buildout-1.7.0-py2.6.egg',
+    '/home/abdel/env/awsbotiga/eggs/setuptools-0.6c12dev_r88846-py2.7.egg',
+    '/home/abdel/env/awsbotiga/eggs/zc.buildout-1.7.1-py2.7.egg',
     ]
 
 

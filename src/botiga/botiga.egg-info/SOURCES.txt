@@ -6,6 +6,7 @@ setup.py
 botiga/DadesProductes.py
 botiga/__init__.py
 botiga/productes.txt
+botiga/security.py
 botiga/tests.py
 botiga/views.py
 botiga.egg-info/PKG-INFO
@@ -18,12 +19,11 @@ botiga.egg-info/top_level.txt
 botiga/static/favicon.ico
 botiga/static/footerbg.png
 botiga/static/headerbg.png
-botiga/static/ie6.css
 botiga/static/middlebg.png
-botiga/static/pylons.css
 botiga/static/pyramid-small.png
 botiga/static/pyramid.png
 botiga/static/style.css
 botiga/static/transparent.gif
-botiga/templates/mytemplate.pt
+botiga/templates/home.mako
 botiga/templates/productes.mako
+botiga/templates/realitzarComanda.mako

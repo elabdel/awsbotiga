@@ -7,5 +7,8 @@
    <h1>Benvinguts a la nostra botiga SimpleShop</h1>
    <input type="button" class="button" value="Productes" onclick="window.location.href='/productes'"></input>
    <input type="button" class="button" value="Llistat de comandes" onclick="window.location.href='/llistaComandes'"></input>
+   <span tal:condition="logged_in">
+   <a href="${request.application_url}/logout">Logout</a>
+</span>
 </body>
 </html>  

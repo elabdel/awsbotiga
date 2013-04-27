@@ -1,13 +1,15 @@
 html { 
-				background: url('http://4.bp.blogspot.com/-hp3miAun6Lc/UNLWAaNKAGI/AAAAAAAAACI/pVrm1_nDEwM/s1600/fruits-and-veggies-1920x1200-wallpaper-frutas-vegetales-collage.jpg') no-repeat center center fixed; 
+				background: url('http://i021.radikal.ru/1003/8c/b9f4df8edbbe.png') no-repeat center center fixed; 
 				-webkit-background-size: cover;
 				-moz-background-size: cover;
 				-o-background-size: cover;
 				background-size: cover;
+				
 			}
 			
 			body {
 				background: none;
+			
 			}
 h1{
 	#margin: 50px 50px 50px 25%;
@@ -72,4 +74,11 @@ h1{
     -moz-box-shadow:0 0 5px #bbb;
     box-shadow:0 0 5px #bbb;
     outline: none;
+}
+.text {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.4);
 }

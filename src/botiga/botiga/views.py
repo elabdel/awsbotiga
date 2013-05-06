@@ -84,7 +84,7 @@ def login(request):
         lloc = came_from.split("/")
         message = "Ets %s, i com a tal no pots entrar a %s" % (user,lloc[len(lloc)-1])
     else:
-        message = "Identifica't per entrar al sagrat mon d'Egipte"
+        message = "Es necessari autentificar-se per accedir a aquesta seccio."
     login = ''
     password = ''
     if 'form.submitted' in request.params:

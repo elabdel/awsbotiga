@@ -3,8 +3,12 @@ MANIFEST.in
 README.txt
 setup.cfg
 setup.py
+botiga/DadesComandes.py
 botiga/DadesProductes.py
 botiga/__init__.py
+botiga/comandes.txt
+botiga/id-comanda.txt
+botiga/models.py
 botiga/productes.txt
 botiga/security.py
 botiga/tests.py
@@ -20,10 +24,13 @@ botiga/static/favicon.ico
 botiga/static/footerbg.png
 botiga/static/headerbg.png
 botiga/static/middlebg.png
+botiga/static/pylons.css
 botiga/static/pyramid-small.png
 botiga/static/pyramid.png
 botiga/static/style.css
 botiga/static/transparent.gif
 botiga/templates/home.mako
+botiga/templates/llistaComandes.mako
+botiga/templates/login.mako
 botiga/templates/productes.mako
 botiga/templates/realitzarComanda.mako

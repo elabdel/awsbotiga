@@ -19,7 +19,7 @@
 	  <form action="realitzarComanda" method="POST">
       <table border="0" class="taula">
 	  <tr><td colspan="6"><center><h1>${projecte}</h1></center></td></tr>
-	  <tr><td class="button">ID</td><td class="button">Nom producte</td><td class="button">Stock</td><td class="button">Preu</td><td class="button">Quantitat</td></tr>
+	  <tr><td class="td">ID</td><td class="td">Nom producte</td><td class="td">Stock</td><td class="td">Preu</td><td class="td">Quantitat</td></tr>
       % for prod in productes:
 			
 		<tr>

@@ -19,12 +19,12 @@
   <![endif]-->
 </head>
 <body>
-  <div id="wrap">
+  <center><div id="wrap">
     <div id="top-small">
       <div class="top-small align-center">
         <div>
           <img width="220" height="50" alt="pyramid"
-        src="${request.static_url('botiga:static/pyramid-small.png')}" />
+        src="${request.static_url('botiga:static/logo.png')}" />
         </div>
       </div>
     </div>
@@ -46,13 +46,15 @@
           <input type="text" name="login" class="taula" value="${login}"/><br/>
           <input type="password" name="password" class="taula"
                  value="${password}"/><br/>
-          <input type="submit" class="button" name="form.submitted" value="Log In"/>
+          <input type="submit" class="button" name="form.submitted" value="Accedir"/>
         </form></center>
       </div>
     </div>
   </div>
+  <br><br><br>
   <div id="footer">
-    <div class="footer">Copyleft Institut Lacetània 2013.</div>
+    <div class="footer">CopyRight Abdel 2013.</div>
   </div>
+  </center>
 </body>
 </html>

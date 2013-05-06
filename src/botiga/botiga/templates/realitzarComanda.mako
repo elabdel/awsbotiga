@@ -9,12 +9,12 @@
 		<table border='1' class="taula">
 				<tr><td colspan="6"><center><h1>La teva compra</h1></center></td></tr>
 				<tr>
-					<td class="button"><b>ID Comanda</b></td>
-					<td class="button"><b>ID Client</b></td>
-					<td class="button"><b>Pepino</b></td>
-					<td class="button"><b>Enciam</b></td>
-					<td class="button"><b>Platan</b></td>
-					<td class="button"><b>Preu Total</b></td>
+					<td class="td"><b>ID Comanda</b></td>
+					<td class="td"><b>ID Client</b></td>
+					<td class="td"><b>Pepino</b></td>
+					<td class="td"><b>Enciam</b></td>
+					<td class="td"><b>Platan</b></td>
+					<td class="td"><b>Preu Total</b></td>
 				</tr>
 				
 				<tr>
